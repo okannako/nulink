@@ -58,7 +58,7 @@ nulink/nulink nulink ursula init \
 --max-gas-price 100
 ```
 
-6.) Node başlatma işlemini aşağıdaki kodu girerek yapıyoruz. Daha sonra hemen log kodunu girerek logları izleyip sorun olup olmadığına bakıyoruz. Görseldeki gibi çıktılar vermeli ayrıca çıktıların içinde yer alan IP'li satırıda kaydedelim. 
+6.) Node başlatma işlemini aşağıdaki kodu girerek yapıyoruz. Daha sonra hemen log kodunu girerek logları izleyip sorun olup olmadığına bakıyoruz. Görseldeki gibi çıktılar vermeli ayrıca çıktıların içinde yer alan IP'li satırı da kaydedelim. 
 ```
 docker run --restart on-failure -d \
 --name ursula \
