@@ -17,6 +17,10 @@ sleep 5
 
 cd
 
+echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
+echo "export WALLET=wallet" >> $HOME/.bash_profile
+source $HOME/.bash_profile
+
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++'
 echo -e "Your node name: \e[1m\e[32m$NODENAME\e[0m"
 echo -e "Your wallet name: \e[1m\e[32m$WALLET\e[0m"
