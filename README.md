@@ -12,7 +12,7 @@ width=45%
 ### Kurulum Rehber Videosu
  - 
  
-### Node Kurulum Adımları
+### A-) Node Kurulum Adımları
 - Video ile birlikte paralel giderseniz daha rahat kurulum yaparsınız.
 - Öncelikle Contabo, Hetzner, Linode, Digital Oceon gibi portların açık olduğu vps sağlayıcıları dışında kurulum yapacaksanız. Alttaki kodlarla ya da sağlayıcının kendi sitesinden 9151 portunu açmalısınız.
 ```
@@ -58,7 +58,7 @@ nulink/nulink nulink ursula init \
 --max-gas-price 100
 ```
 
-6.) Node başlatma işlemini aşağıdaki kodu girerek yapıyoruz. Daha sonra hemen log kodunu girerek logları izleyip sorun olup olmadığına bakıyoruz. Görseldeki gibi çıktılar vermeli ayrıca çıktıların içinde yer alan IP'li satırı da kaydedelim. 
+6.) Node başlatma işlemini aşağıdaki kodu girerek yapıyoruz. Daha sonra hemen log kodunu girerek logları izleyip sorun olup olmadığına bakıyoruz. Görseldeki gibi çıktılar vermeli ayrıca çıktıların içinde yer alan IP'li satırı da kaydedelim. Her şey olması gerektiği gibiyse Node işlemlerimiz burada bitti, Şimdi ikince bölüme geçiyoruz.
 ```
 docker run --restart on-failure -d \
 --name ursula \
@@ -73,7 +73,7 @@ nulink/nulink nulink ursula run --no-block-until-ready
 docker logs -f ursula
 ```
 
-### Staking İşlemi Adımları
+### B-) Staking İşlemi Adımları
  - İlk olarak ilgili siteye bağlanıyoruz https://test-staking.nulink.org/faucet ve daha sonra ``Connect`` yaparak herhangi bir Metamask cüzdan adresimizi siteye bağlıyoruz. (Mainnetler de kullanmadığınız, testler için işlem yaptığınız bir cüzdan olsun ve hangi cüzdanla işlem yaptığınızı unutmayın.)
  - Eğer yoksa BNB Test Ağını şu siteden https://chainlist.org/ Metamaskımıza ekleyip cüzdanı o ağa geçiriyoruz. 
  - https://testnet.binance.org/faucet-smart sitesine gidip kendimizie test tokenı alıyoruz.
@@ -81,4 +81,4 @@ docker logs -f ursula
  - Staking adımından miktarı max yapıp işlemi onaylıyoruz. 
  - Onaydan sonra sol alttaki ``Bond Worker`` butonuna tıklayıp gelen ekranda 2. satıra key oluştururken verdiği Public adresi, 3. satıra da Node kurulumu sırasında 6. adımda kaydettiğimiz IP'li satırı girip onaylıyoruz.
  - Başta Offline görünür ancak bir süre sonra Online olarak görünmeli.
- - !DİKKAT! Son adım olmazsa olmaz. Bu formu ( https://forms.gle/MBzxNbJ57pEd3hh27 )kesinlike doldurup yollamalısınız isterseniz hemen yollayın isterseniz Staking sitesi yenilendikçe denedikçe yollayın. Çünkü sizden öneri veya hata bulmanızı istiyorlar ve de bu yazdıklarınız ciddi şeyler olmalı. Önemsizce yazılmış ya da kopyala yapıştırla yorum yapıp yollanan cümleler olmalalı. Ödüller bun forma da bağlı.
+ - ``!DİKKAT!`` Son adım olmazsa olmaz. Bu formu ( https://forms.gle/MBzxNbJ57pEd3hh27 )kesinlike doldurup yollamalısınız isterseniz hemen yollayın isterseniz Staking sitesi yenilendikçe denedikçe yollayın. Çünkü sizden öneri veya hata bulmanızı istiyorlar ve de bu yazdıklarınız ciddi şeyler olmalı. Önemsizce yazılmış ya da kopyala yapıştırla yorum yapıp yollanan cümleler olmalalı. Ödüller bun forma da bağlı.
