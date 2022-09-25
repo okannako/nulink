@@ -72,13 +72,16 @@ nulink/nulink nulink ursula run --no-block-until-ready
 ```
 docker logs -f ursula
 ```
+![nulink1](https://user-images.githubusercontent.com/73176377/192143273-1bffe711-22f6-4429-99d2-04a7afc15d00.PNG)
 
 ### B-) Staking İşlemi Adımları
  - İlk olarak ilgili siteye bağlanıyoruz https://test-staking.nulink.org/faucet ve daha sonra ``Connect`` yaparak herhangi bir Metamask cüzdan adresimizi siteye bağlıyoruz. (Mainnetler de kullanmadığınız, testler için işlem yaptığınız bir cüzdan olsun ve hangi cüzdanla işlem yaptığınızı unutmayın.)
  - Eğer yoksa BNB Test Ağını şu siteden https://chainlist.org/ Metamaskımıza ekleyip cüzdanı o ağa geçiriyoruz (Sağ üstte Testnet butonunun açık olduğundan  emin olun). 
  - https://testnet.binance.org/faucet-smart sitesine gidip kendimizie test tokenı alıyoruz.
  - Cüzdanımıza token geldikten sonra 1. sıradaki siteden cüzdanımıza faucet alıyoruz.
- - Staking adımından miktarı max yapıp işlemi onaylıyoruz. 
+ - Staking adımından miktarı max yapıp işlemi onaylıyoruz.
+    ![nulink2](https://user-images.githubusercontent.com/73176377/192143295-c81f229d-63ea-4944-b0bb-2df52e8e2c14.PNG)
  - Onaydan sonra sol alttaki ``Bond Worker`` butonuna tıklayıp gelen ekranda 2. satıra key oluştururken verdiği Public adresi, 3. satıra da Node kurulumu sırasında 6. adımda kaydettiğimiz IP'li satırı girip onaylıyoruz.
+   ![nulink3](https://user-images.githubusercontent.com/73176377/192143305-57850b56-b8ca-42b6-a031-976301f1e65f.PNG) 
  - Başta Offline görünür ancak bir süre sonra Online olarak görünmeli.
  - ``!DİKKAT!`` Son adım olmazsa olmaz. Bu formu ( https://forms.gle/MBzxNbJ57pEd3hh27 ) kesinlike doldurup yollamalısınız isterseniz hemen yollayın isterseniz Staking sitesi yenilendikçe denedikçe yollayın. Çünkü sizden öneri veya hata bulmanızı istiyorlar ve de bu yazdıklarınız ciddi şeyler olmalı. Önemsizce yazılmış ya da kopyala yapıştırla yorum yapıp yollanan cümleler olmalalı. Bu form yollamayanlar ödül kazanma şansını kaybedecek. Testnet bitiş tarihinden önce mutlaka yollanmalı.
