@@ -41,7 +41,7 @@ export NULINK_KEYSTORE_PASSWORD=SIZINSIFRE
 export NULINK_OPERATOR_ETH_PASSWORD=SIZINSIFRE
 ```
 
-5.) Kodu bir metin belgesine kopyalayıp kendimize göre düzenliyoruz. Şifre bölümünü bir önce adımda zaten halletmiştik. GIZLIANAHTARYOLU yazısını silip en başta key oluşturduğumuzda bize verdiği UTC ile başlayan satırı (UTC--2022-09-2xxxxxxxxxxxx) sonuna kadar kopyalayıp buraya yapıştıyoruz. PUBLICADRESINIZ bölümünü de siliyoruz ve key oluştururken ki bize verdiği Public adresi giriyoruz. Girdikten sonra bize kelimeler verecek bunları kaydedip gelen uyarıya `y` diyerek devam ediyoruz. En sonda bizde tekrar kelimeleri girmemizi isteyecek, kaydettiğimiz kelimeleri buraya yapıştırarak işlemi bitiriyoruz. Aldığınız çıktıyıda kaydedin.
+5.) Kodu bir metin belgesine kopyalayıp kendimize göre düzenliyoruz. Şifre bölümünü bir önce adımda zaten halletmiştik. GIZLIANAHTARYOLU yazısını silip en başta key oluşturduğumuzda bize verdiği UTC ile başlayan satırı (UTC--2022-09-2xxxxxxxxxxxx) sonuna kadar kopyalayıp buraya yapıştıyoruz. PUBLICADRESINIZ bölümünü de siliyoruz ve key oluştururken ki bize verdiği Public adresi giriyoruz. Girdikten sonra bize kelimeler verecek bunları kaydedip gelen uyarıya `y` diyerek devam ediyoruz. En sonda bizde tekrar kelimeleri girmemizi isteyecek, kaydettiğimiz kelimeleri buraya yapıştırarak işlemi bitiriyoruz. Aldığınız çıktıyı da kaydedin.
 ```
 docker run -it --rm \
 -p 9151:9151 \
