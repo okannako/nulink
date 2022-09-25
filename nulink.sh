@@ -19,7 +19,7 @@ cd
 
 if [ ! $NODENAME ]; then
 	read -p "Enter node name: " NODENAME
-	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
+	echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
 fi
 
 if [ ! $WALLET ]; then
