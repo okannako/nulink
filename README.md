@@ -20,13 +20,7 @@ sudo ufw enable
 sudo ufw allow 9151
 ```
 
-1.) ilk olarak Node ve Wallet isimlerimizi belirliyoruz daha sonra tek kodu yapıştıyoruz. Bazı noktalarda sizden değer girmenizi isteyecek, şifre, kelimler gibi ve belirli çıktılar verecek. Hepsini kesinlikle bir yere kaydedin, ilerde lazım olma ihtimali çok yüksek.
-```
-NODENAME=ISIM
-```
-```
-WALLET=ISIM
-```
+1.) ilk olarak tek kodu yapıştıyoruz ve gelen uyarıda node ismimizi giriyoruz. Bazı noktalarda sizden değer girmenizi isteyecek, şifre, kelimeler gibi ve belirli çıktılar verecek. Hepsini kesinlikle bir yere kaydedin, ilerde lazım olma ihtimali çok yüksek.
 ```
 wget -q -O nulink.sh https://raw.githubusercontent.com/okannako/nulink/main/nulink.sh && chmod +x nulink.sh && sudo /bin/bash nulink.sh
 ```
