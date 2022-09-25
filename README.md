@@ -75,7 +75,7 @@ docker logs -f ursula
 
 ### B-) Staking İşlemi Adımları
  - İlk olarak ilgili siteye bağlanıyoruz https://test-staking.nulink.org/faucet ve daha sonra ``Connect`` yaparak herhangi bir Metamask cüzdan adresimizi siteye bağlıyoruz. (Mainnetler de kullanmadığınız, testler için işlem yaptığınız bir cüzdan olsun ve hangi cüzdanla işlem yaptığınızı unutmayın.)
- - Eğer yoksa BNB Test Ağını şu siteden https://chainlist.org/ Metamaskımıza ekleyip cüzdanı o ağa geçiriyoruz. 
+ - Eğer yoksa BNB Test Ağını şu siteden https://chainlist.org/ Metamaskımıza ekleyip cüzdanı o ağa geçiriyoruz (Sağ üstte Testnet butonunun açık olduğundan  emin olun). 
  - https://testnet.binance.org/faucet-smart sitesine gidip kendimizie test tokenı alıyoruz.
  - Cüzdanımıza token geldikten sonra 1. sıradaki siteden cüzdanımıza faucet alıyoruz.
  - Staking adımından miktarı max yapıp işlemi onaylıyoruz. 
