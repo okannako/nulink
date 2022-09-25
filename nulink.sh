@@ -17,8 +17,14 @@ sleep 5
 
 cd
 
-echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
-echo "export WALLET=wallet" >> $HOME/.bash_profile
+if [ ! $NODENAME ]; then
+	read -p "Enter node name: " NODENAME
+	echo 'export NODENAME='$NODENAME >> $HOME/.bash_profile
+fi
+
+if [ ! $WALLET ]; then
+	echo "export WALLET=wallet" >> $HOME/.bash_profile
+fi
 source $HOME/.bash_profile
 
 echo '+++++++++++++++++++++++++++++++++++++++++++++++++++'
