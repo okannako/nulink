@@ -35,13 +35,13 @@ cp /root/geth-linux-amd64-1.10.24-972007XXXXX /root/nulink
 chmod -R 777 /root/nulink
 ```
 
-4.) Şifre ataması yapıyoruz. Lütfen tek kodu çalıştırdığımızda verdiğiniz aynı şifreyi burada SİZİNSİFRE bölümüne yazın.
+4.) Şifre ataması yapıyoruz. Lütfen tek kodu çalıştırdığımızda verdiğiniz aynı şifreyi burada SIZINSIFRE bölümüne yazın.
 ```
-export NULINK_KEYSTORE_PASSWORD=SİZİNSİFRE
-export NULINK_OPERATOR_ETH_PASSWORD=SİZİNSİFRE
+export NULINK_KEYSTORE_PASSWORD=SIZINSIFRE
+export NULINK_OPERATOR_ETH_PASSWORD=SIZINSIFRE
 ```
 
-5.) Kodu bir metin belgesine kopyalayıp kendimize göre düzenliyoruz. Şifre bölümünü bir önce adımda zaten halletmiştik. GIZLIANAHTARYOLU yazısını silip en başta key oluşturduğumuzda bize verdiği UTC ile başlayan satırı (UTC--2022-09-2xxxxxxxxxxxx) sonuna kadar kopyalayıp buraya yapıştıyoruz. <YOUR PUBLIC ADDRESS> bölümünüde siliyoruz ve key oluştururken ki bize verdiği Public adresi giriyoruz. Girdikten sonra bize kelimeler verecek bunları kaydedip gelen uyarıya `y` diyerek devam ediyoruz. En sonda bizde tekrar kelimeleri girmemizi isteyecek, kaydettiğimiz kelimeleri buraya yapıştırarak işlemi bitiriyoruz. Aldığınız çıktıyıda kaydedin.
+5.) Kodu bir metin belgesine kopyalayıp kendimize göre düzenliyoruz. Şifre bölümünü bir önce adımda zaten halletmiştik. GIZLIANAHTARYOLU yazısını silip en başta key oluşturduğumuzda bize verdiği UTC ile başlayan satırı (UTC--2022-09-2xxxxxxxxxxxx) sonuna kadar kopyalayıp buraya yapıştıyoruz. PUBLICADRESINIZ bölümünüde siliyoruz ve key oluştururken ki bize verdiği Public adresi giriyoruz. Girdikten sonra bize kelimeler verecek bunları kaydedip gelen uyarıya `y` diyerek devam ediyoruz. En sonda bizde tekrar kelimeleri girmemizi isteyecek, kaydettiğimiz kelimeleri buraya yapıştırarak işlemi bitiriyoruz. Aldığınız çıktıyıda kaydedin.
 ```
 docker run -it --rm \
 -p 9151:9151 \
@@ -54,7 +54,7 @@ nulink/nulink nulink ursula init \
 --network horus \
 --payment-provider https://data-seed-prebsc-2-s2.binance.org:8545 \
 --payment-network bsc_testnet \
---operator-address <YOUR PUBLIC ADDRESS> \
+--operator-address PUBLICADRESINIZ \
 --max-gas-price 100
 ```
 
