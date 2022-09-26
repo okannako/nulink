@@ -72,7 +72,7 @@ nulink/nulink nulink ursula run --no-block-until-ready
 ```
 docker logs -f ursula
 ```
-![nulink1](https://user-images.githubusercontent.com/73176377/192143273-1bffe711-22f6-4429-99d2-04a7afc15d00.PNG)
+![nulink1](https://user-images.githubusercontent.com/73176377/192327127-d7c483c0-38fb-4a58-ae28-db013a39ef7c.PNG)
 
 ### B-) Staking İşlemi Adımları
  - İlk olarak ilgili siteye bağlanıyoruz https://test-staking.nulink.org/faucet ve daha sonra ``Connect`` yaparak herhangi bir Metamask cüzdan adresimizi siteye bağlıyoruz. (Mainnetler de kullanmadığınız, testler için işlem yaptığınız bir cüzdan olsun ve hangi cüzdanla işlem yaptığınızı unutmayın.)
