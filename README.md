@@ -7,10 +7,11 @@ width=45%
  - Ubuntu 20.04
  - 4 GB RAM
  - 30 GB HDD
- - işlemci olarak kaynak dosyalarda net bir açıklamaya yok ama önerim 2CPU
+ - İşlemci olarak kaynak dosyalarda net bir açıklamaya yok ama önerim 2 CPU
  
 ### Kurulum Rehber Videosu
- - 
+ - Video: https://youtu.be/F69jA9JmVR8
+ - NuLink Discord: https://discord.gg/kRcXuphmpz
  
 ### A-) Node Kurulum Adımları
 - Video ile birlikte paralel giderseniz daha rahat kurulum yaparsınız.
@@ -20,7 +21,7 @@ sudo ufw enable
 sudo ufw allow 9151
 ```
 
-1.) ilk olarak tek kodu yapıştıyoruz ve gelen uyarıda node ismimizi giriyoruz. Bazı noktalarda sizden değer girmenizi isteyecek, şifre, kelimeler gibi ve belirli çıktılar verecek. Hepsini kesinlikle bir yere kaydedin, ilerde lazım olma ihtimali çok yüksek.
+1.) İlk olarak tek kodu yapıştıyoruz ve gelen uyarıda node ismimizi giriyoruz. Bazı noktalarda sizden değer girmenizi isteyecek, şifre, kelimeler gibi ve belirli çıktılar verecek. Hepsini kesinlikle bir yere kaydedin, ilerde lazım olma ihtimali çok yüksek.
 ```
 wget -q -O nulink.sh https://raw.githubusercontent.com/okannako/nulink/main/nulink.sh && chmod +x nulink.sh && sudo /bin/bash nulink.sh
 ```
