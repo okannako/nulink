@@ -86,3 +86,28 @@ docker logs -f ursula
    ![nulink3](https://user-images.githubusercontent.com/73176377/192143305-57850b56-b8ca-42b6-a031-976301f1e65f.PNG) 
  - Başta Offline görünür ancak bir süre sonra Online olarak görünmeli.
  - ``!DİKKAT!`` Son adım olmazsa olmaz. Bu formu ( https://forms.gle/MBzxNbJ57pEd3hh27 ) kesinlike doldurup yollamalısınız isterseniz hemen yollayın isterseniz Staking sitesi yenilendikçe denedikçe yollayın. Çünkü sizden öneri veya hata bulmanızı istiyorlar ve de bu yazdıklarınız ciddi şeyler olmalı. Önemsizce yazılmış ya da kopyala yapıştırla yorum yapıp yollanan cümleler olmalalı. Bu form yollamayanlar ödül kazanma şansını kaybedecek. Testnet bitiş tarihinden önce mutlaka yollanmalı.
+ 
+ 
+ ### Güncelleme
+
+1-) Başlangıçta aşağıdaki iki kodla node durdurup docker bilgilerini temizliyoruz.
+```
+sudo docker kill ursula
+sudo docker rm ursula
+```
+2-) Yeni dosyaları çekiyoruz.
+```
+docker pull nulink/nulink:latest
+```
+3-) Tek kod şeklinde girip tekrar başlatıyoruz.
+```
+docker run --restart on-failure -d \
+--name ursula \
+-p 9151:9151 \
+-v /root/nulink:/code \
+-v /root/nulink:/home/circleci/.local/share/nulink \
+-e NULINK_KEYSTORE_PASSWORD \
+-e NULINK_OPERATOR_ETH_PASSWORD \
+nulink/nulink nulink ursula run --no-block-until-ready
+```
+4-) ``docker logs -f ursula`` komutuyla kontrol ettiğinizde eğer ``is not bonded to a staking provider`` yazısı çıkıyorsa https://test-staking.nulink.org sitesine gidip unbond bond işlemi yaptığınızda sorun kalmayacaktır. Ayrıca loglarda sorun olmasa bile siteye gidip ``Online`` olarak göründüğünden ve sağ tarafta ödüllerin arttığından emin olun. Bir sorunla karşılaşırsanız https://forms.gle/MBzxNbJ57pEd3hh27 adresindeki formu doldurmayı unutmayın.
