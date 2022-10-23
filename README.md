@@ -99,7 +99,12 @@ sudo docker rm ursula
 ```
 docker pull nulink/nulink:latest
 ```
-3-) Tek kod şeklinde girip tekrar başlatıyoruz.
+3-) İlk kurulumdaki belirlediğiniz şifreleri yine aynı şekilde ekleyin.
+```
+export NULINK_KEYSTORE_PASSWORD=SIZINSIFRE
+export NULINK_OPERATOR_ETH_PASSWORD=SIZINSIFRE
+```
+4-) Tek kod şeklinde girip tekrar başlatıyoruz.
 ```
 docker run --restart on-failure -d \
 --name ursula \
@@ -110,4 +115,4 @@ docker run --restart on-failure -d \
 -e NULINK_OPERATOR_ETH_PASSWORD \
 nulink/nulink nulink ursula run --no-block-until-ready
 ```
-4-) ``docker logs -f ursula`` komutuyla kontrol ettiğinizde eğer ``is not bonded to a staking provider`` yazısı çıkıyorsa https://test-staking.nulink.org sitesine gidip unbond bond işlemi yaptığınızda sorun kalmayacaktır. Ayrıca loglarda sorun olmasa bile siteye gidip ``Online`` olarak göründüğünden ve sağ tarafta ödüllerin arttığından emin olun. Bir sorunla karşılaşırsanız https://forms.gle/MBzxNbJ57pEd3hh27 adresindeki formu doldurmayı unutmayın.
+5-) ``docker logs -f ursula`` komutuyla kontrol ettiğinizde eğer ``is not bonded to a staking provider`` yazısı çıkıyorsa https://test-staking.nulink.org sitesine gidip unbond bond işlemi yaptığınızda sorun kalmayacaktır. Ayrıca loglarda sorun olmasa bile siteye gidip ``Online`` olarak göründüğünden ve sağ tarafta ödüllerin arttığından emin olun. Bir sorunla karşılaşırsanız https://forms.gle/MBzxNbJ57pEd3hh27 adresindeki formu doldurmayı unutmayın.
