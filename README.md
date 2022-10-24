@@ -137,7 +137,7 @@ nulink/nulink nulink ursula run --no-block-until-ready
  wget -q -O nulinktasima.sh https://raw.githubusercontent.com/okannako/nulink/main/nulinktasima.sh && chmod +x nulinktasima.sh && sudo /bin/bash nulinktasima.sh
 ```
   - Yükleme bittikten sonra yedeklediğimiz dosyaları winscp ile yeni vps'de root'un içine atıyoruz.
-  - Yukarıda Node Kurulum Adımları 2'den aynı şekilde devam ediyoruz ve en son başlatma adımında aşağıdaki kodu giriyoruz.
+  - Yukarıda Node Kurulum Adımları 2'den aynı şekilde devam ediyoruz ve en son başlatma adımında (6. adım) yukarıdaki kod yerine aşağıdakini kullanıyoruz.
 ```
 docker run --restart on-failure -d \
 --name ursula \
