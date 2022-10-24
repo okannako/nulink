@@ -117,7 +117,7 @@ nulink/nulink nulink ursula run --no-block-until-ready
 ```
 5-) ``docker logs -f ursula`` komutuyla kontrol ettiğinizde eğer ``is not bonded to a staking provider`` yazısı çıkıyorsa https://test-staking.nulink.org sitesine gidip unbond bond işlemi yaptığınızda sorun kalmayacaktır. Ayrıca loglarda sorun olmasa bile siteye gidip ``Online`` olarak göründüğünden ve sağ tarafta ödüllerin arttığından emin olun. Bir sorunla karşılaşırsanız https://forms.gle/MBzxNbJ57pEd3hh27 adresindeki formu doldurmayı unutmayın.
 
-### D-) HATA
+### D-) Hata
  - Eğer aşağıdaki ss'de görünen hata ile karşılaşıyorsanız Worker adresinize (en başta oluşturduğunuz) bir miktar TBNB yollayın. 2. ss'de ki gibi TX gösterip duracaktır, bu normal.
  
 ![hatanulink](https://user-images.githubusercontent.com/73176377/197430522-a19cd18e-be8c-451a-b151-e0bc129a356d.PNG)
@@ -136,7 +136,20 @@ nulink/nulink nulink ursula run --no-block-until-ready
 ```
  wget -q -O nulinktasima.sh https://raw.githubusercontent.com/okannako/nulink/main/nulinktasima.sh && chmod +x nulinktasima.sh && sudo /bin/bash nulinktasima.sh
 ```
-  - Yükleme bittikten sonra yedeklediğimiz dosyaları winscp ile yeni vps'de root'un içine atıyoruz ve Nulink içindeki ursula.json dosyasını sağ tıklayıp siliyoruz, yoksa hata veriyor.
-  - Yukarıda Node Kurulum Adımları 2'den aynı şekilde devam ediyoruz.
+  - Yükleme bittikten sonra yedeklediğimiz dosyaları winscp ile yeni vps'de root'un içine atıyoruz.
+  - Yukarıda Node Kurulum Adımları 2'den aynı şekilde devam ediyoruz ve en son başlatma adımında aşağıdaki kodu giriyoruz.
+```
+docker run --restart on-failure -d \
+--name ursula \
+-p 9151:9151 \
+-v /root/nulink:/code \
+-v /root/nulink:/home/circleci/.local/share/nulink \
+-e NULINK_KEYSTORE_PASSWORD \
+-e NULINK_OPERATOR_ETH_PASSWORD \
+nulink/nulink nulink ursula run \
+--rest-port 9152 \
+--config-file /home/circleci/.local/share/nulink/ursula.json  \
+--no-block-until-ready
+```
 
 
