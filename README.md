@@ -136,7 +136,7 @@ nulink/nulink nulink ursula run --no-block-until-ready
 ```
  wget -q -O nulinktasima.sh https://raw.githubusercontent.com/okannako/nulink/main/nulinktasima.sh && chmod +x nulinktasima.sh && sudo /bin/bash nulinktasima.sh
 ```
-  - Yükleme bittikten sonra yedeklediğimiz dosyaları winscip ile yeni vps'de root'un içine atıyoruz ve Nulink içindeki ursula.json dosyasını sağ tıklayıp siliyoruz, yoksa hata veriyor.
+  - Yükleme bittikten sonra yedeklediğimiz dosyaları winscp ile yeni vps'de root'un içine atıyoruz ve Nulink içindeki ursula.json dosyasını sağ tıklayıp siliyoruz, yoksa hata veriyor.
   - Yukarıda Node Kurulum Adımları 2'den aynı şekilde devam ediyoruz.
 
 
