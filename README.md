@@ -118,25 +118,25 @@ nulink/nulink nulink ursula run --no-block-until-ready
 5-) ``docker logs -f ursula`` komutuyla kontrol ettiğinizde eğer ``is not bonded to a staking provider`` yazısı çıkıyorsa https://test-staking.nulink.org sitesine gidip unbond bond işlemi yaptığınızda sorun kalmayacaktır. Ayrıca loglarda sorun olmasa bile siteye gidip ``Online`` olarak göründüğünden ve sağ tarafta ödüllerin arttığından emin olun. Bir sorunla karşılaşırsanız https://forms.gle/MBzxNbJ57pEd3hh27 adresindeki formu doldurmayı unutmayın.
 
 ### D-) HATA
- -Eğer aşağıdaki ss'de görünen hata ile karşılaşıyorsanız Worker adresinize (en başta oluşturduğunuz) bir miktar TBNB yollayın. 2. ss'de ki gibi TX gösterip duracaktır, bu normal.
+ - Eğer aşağıdaki ss'de görünen hata ile karşılaşıyorsanız Worker adresinize (en başta oluşturduğunuz) bir miktar TBNB yollayın. 2. ss'de ki gibi TX gösterip duracaktır, bu normal.
  
 ![hatanulink](https://user-images.githubusercontent.com/73176377/197430522-a19cd18e-be8c-451a-b151-e0bc129a356d.PNG)
 ![hatanulink2](https://user-images.githubusercontent.com/73176377/197430532-55a3b6b3-b063-4d66-a61e-af2ddb49aafb.PNG)
 
 ### E-) NuLink Taşıma Rehberi
 
- -İlk önce https://test-staking.nulink.org/ sitesinden Unbond ve Unstake işlemlerini yapıyoruz.
- -Daha sonra winscp ile node kurulu olan vps'e bağlanıp ``nulink`` ve ``geth-linux-amd64-1.10.24-972007a5`` klasörlerini yedekliyoruz.
- -Şu iki kodla eski node u durduruyoruz.
+  - İlk önce https://test-staking.nulink.org/ sitesinden Unbond ve Unstake işlemlerini yapıyoruz.
+  - Daha sonra winscp ile node kurulu olan vps'e bağlanıp ``nulink`` ve ``geth-linux-amd64-1.10.24-972007a5`` klasörlerini yedekliyoruz.
+  - Şu iki kodla eski node u durduruyoruz.
 ```
  sudo docker kill ursula
  sudo docker rm ursula
 ```
- -Sonra yeni vps'e putty vs. ile bağlanıp kurulum işlemlerini başlıyoruz. Aşağıdaki scripti kopyalayıp yapıştırıyoruz ve yüklemeninin bitmesini bekliyoruz.
+  - Sonra yeni vps'e putty vs. ile bağlanıp kurulum işlemlerini başlıyoruz. Aşağıdaki scripti kopyalayıp yapıştırıyoruz ve yüklemeninin bitmesini bekliyoruz.
 ```
  wget -q -O nulinktasima.sh https://raw.githubusercontent.com/okannako/nulink/main/nulinktasima.sh && chmod +x nulinktasima.sh && sudo /bin/bash nulinktasima.sh
 ```
- -Yükleme bittikten sonra yedeklediğimiz dosyaları winscip ile yeni vps'de root'un içine atıyoruz ve Nulink içindeki ursula.json dosyasını sağ tıklayıp siliyoruz, yoksa hata veriyor.
-  -Yukarıda Node Yükleme Adımları 2'den aynı şekilde devam ediyoruz.
+  - Yükleme bittikten sonra yedeklediğimiz dosyaları winscip ile yeni vps'de root'un içine atıyoruz ve Nulink içindeki ursula.json dosyasını sağ tıklayıp siliyoruz, yoksa hata veriyor.
+  - Yukarıda Node Kurulum Adımları 2'den aynı şekilde devam ediyoruz.
 
 
